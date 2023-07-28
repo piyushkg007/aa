@@ -5,9 +5,9 @@ import time
 import utils, math
 import numpy as np
 import socket
-BUFFER_SIZE = 1024
-ip_address = "192.168.78.253" # Replace with your ESP8266's IP address
-port = 80 # Replace with the port number of your ESP8266 TCP/IP server
+# BUFFER_SIZE = 1024
+# ip_address = "192.168.78.253" # Replace with your ESP8266's IP address
+# port = 80 # Replace with the port number of your ESP8266 TCP/IP server
 
 
 # variables 
@@ -233,18 +233,18 @@ def set_but_color(left,right):
         comps[0].setStyleSheet("background-color: Cyan")
         if curLvl==0:
             
-            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.connect((ip_address, port))
-            command = "gpi1oon" # Turn on GPIO pin 5
-            command1="ip"
+            # sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            # sock.connect((ip_address, port))
+            # command = "gpi1oon" # Turn on GPIO pin 5
+            # command1="ip"
 
     
-            sock.sendall(command.encode())
+            # sock.sendall(command.encode())
 
 
 
-            print("command  sent",command)
-            sock.close()
+            print("command  sent")
+            # sock.close()
     elif right=='RIGHT':
         
         comps[2].setStyleSheet("background-color: Cyan")
@@ -253,18 +253,18 @@ def set_but_color(left,right):
             
         
 
-            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            sock.connect((ip_address, port))
-            command = "gpi1ooff" # Turn on GPIO pin 5
+            # sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+            # sock.connect((ip_address, port))
+            # command = "gpi1ooff" # Turn on GPIO pin 5
             command1="ip"
 
     
-            sock.sendall(command.encode())
+            # sock.sendall(command.encode())
 
 
 
-            print("command  sent",command)
-            sock.close()
+            print("command  sent")
+            # sock.close()
     else:
         return
 
